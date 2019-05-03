@@ -100,7 +100,7 @@ def get_average_age_for_season(data, season)
       profiles_array.each do |profiles_hash|
         age = profiles_hash.fetch("age")
         
-        tally += age.to_i
+        tally += age.to_f
         count += 1 
       end
     end
