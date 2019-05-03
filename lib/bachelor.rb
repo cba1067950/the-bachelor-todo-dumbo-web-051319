@@ -85,6 +85,7 @@ def get_occupation(data, hometown)
     profiles_array.each do |profile_hash|
       if profile_hash.fetch("hometown") == hometown
         occupation = profile_hash.fetch("occupation")
+        return occupation
       end
     end
   end
