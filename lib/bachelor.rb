@@ -70,7 +70,7 @@ def count_contestants_by_hometown(data, hometown)
   count = 0
   data.each do |seasons, profiles_array|
     profiles_array.each do |profile_hash|
-      if profiles_array.fetch("hometown") == hometown
+      if profiles_hash.fetch("hometown") == hometown
         count += 1 
       end
     end
