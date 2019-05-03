@@ -107,3 +107,5 @@ def get_average_age_for_season(data, season)
   binding.pry
   (tally / count).ceil
 end
+
+get_average_age_for_season(test_hash)
