@@ -67,12 +67,44 @@ end
 
 def count_contestants_by_hometown(data, hometown)
   # code here
+  count = 0
+  data.each do |seasons, profiles_array|
+    profiles_array.each do |profile_hash|
+      if profile_hash.fetch("hometown") == hometown
+        count += 1 
+      end
+    end
+  end
+  count 
 end
 
 def get_occupation(data, hometown)
   # code here
+  occupation = ""
+  data.each do |season, profiles_array|
+    profiles_array.each do |profile_hash|
+      if profile_hash.fetch("hometown") == hometown
+        occupation = profile_hash.fetch("occupation")
+        return occupation
+      end
+    end
+  end
 end
 
 def get_average_age_for_season(data, season)
   # code here
+  tally = 0 
+  count = 0 
+  data.each do |seasons, profiles_array|
+    if seasons == season
+      profiles_array.each do |profiles_hash|
+        age = profiles_hash.fetch("age")
+        
+        tally += age.to_f
+        count += 1 
+      end
+    end
+  end
+  (tally/count.to_f).round.to_i
 end
+
