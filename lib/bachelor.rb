@@ -89,9 +89,16 @@ def get_occupation(data, hometown)
       end
     end
   end
-  occupation
 end
 
 def get_average_age_for_season(data, season)
   # code here
+  avg = 0 
+  count = 0 
+  data.each do |seasons, profiles_array|
+    if seasons == season
+      profiles_array.each do |profiles_hash|
+        count = profiles_hash.fetch("age")
+  
+  
 end
