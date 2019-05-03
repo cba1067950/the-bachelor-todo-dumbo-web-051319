@@ -80,6 +80,9 @@ end
 
 def get_occupation(data, hometown)
   # code here
+  data.each do |season, profiles_array|
+    profiles_array.each do |profile_hash|
+      if profile_hash.fetch("")
 end
 
 def get_average_age_for_season(data, season)
