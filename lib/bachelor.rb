@@ -102,7 +102,6 @@ def get_average_age_for_season(data, season)
         puts age
         tally += age.to_i
         count += 1 
-        puts (tally/count).ceil
       end
     end
   end
