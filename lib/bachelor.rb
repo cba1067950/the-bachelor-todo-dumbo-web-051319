@@ -96,16 +96,17 @@ def get_average_age_for_season(data, season)
   tally = 0 
   count = 0 
   data.each do |seasons, profiles_array|
+    puts "Season: #{season}"
     if seasons == season
       profiles_array.each do |profiles_hash|
         age = profiles_hash.fetch("age")
+        puts age
         tally += age.to_i
         count += 1 
+        puts (tally/count).ceil
       end
     end
   end
-  binding.pry
   (tally / count).ceil
 end
 
-get_average_age_for_season(test_hash, "season 29")
