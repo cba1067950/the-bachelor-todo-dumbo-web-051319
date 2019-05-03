@@ -67,6 +67,10 @@ end
 
 def count_contestants_by_hometown(data, hometown)
   # code here
+  
+  data.each do |seasons, profiles_array|
+    profiles_array.each do |profile_hash|
+      
 end
 
 def get_occupation(data, hometown)
