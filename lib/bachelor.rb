@@ -108,4 +108,4 @@ def get_average_age_for_season(data, season)
   (tally / count).ceil
 end
 
-get_average_age_for_season(test_hash, season 29)
+get_average_age_for_season(test_hash, "season ")
