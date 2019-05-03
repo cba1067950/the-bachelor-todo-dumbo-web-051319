@@ -105,7 +105,7 @@ def get_average_age_for_season(data, season)
       end
     end
   end
-  puts (tally/count.to_f).ceil
+  puts (tally/count.to_f)
   (tally / count).ceil
 end
 
